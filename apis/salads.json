@@ -1,0 +1,39 @@
+{
+    "items": [
+        {
+            "fields": {
+                "title": "House Salad",
+                "price": "$7.95",
+                "discription": "chopped iceberg, tomatoes, cucumber, onions, olives, croutons, vinaigrette"
+            }
+        },
+        {
+            "fields": {
+                "title": "Pacific Coast Salad",
+                "price": "$21.95",
+                "discription": "blackened rock fish, chopped iceberg, boiled egg, tomatoes, vinaigrette"
+            }
+        },
+        {
+            "fields": {
+                "title": "Caprese",
+                "price": "$10.95",
+                "discription": "sliced tomatoes, fresh mozzarella, basil, red onion, balsamic vinaigrette"
+            }
+        },
+        {
+            "fields": {
+                "title": "Shrimp Louie",
+                "price": "$24.95",
+                "discription": "chopped iceberg, boiled egg, roma tomatoes, thousand island dressing"
+            }
+        },
+        {
+            "fields": {
+                "title": "Caesar Salad",
+                "price": "$10.95",
+                "discription": "hearts of romaine, croutons, creamy caesar dressing, parmesan cheese"
+            }
+        }
+    ]
+}

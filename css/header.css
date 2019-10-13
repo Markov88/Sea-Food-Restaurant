@@ -1,0 +1,52 @@
+#nav_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background: rgb(41, 41, 41);
+    padding: 0 3rem;
+    opacity: .94;
+    position: fixed;
+    width: 100%;
+    transition: transform .5s;
+    transform: translate3d(0, 0, 0);
+    z-index: 9999;
+}
+
+.header_logo {
+    display: block;
+    padding: 1rem 0;
+    color: rgb(197, 195, 195)(194, 190, 190);
+    text-decoration: none;
+}
+
+#nav_header.scrolled {
+    transform: translate3d(0, -8rem, 0);
+}
+
+.logo_p {
+    font-family: 'PT Serif';
+    font-size: 2rem;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+}
+
+.img img {
+    background: rgb(197, 195, 195)(194, 190, 190);
+    width: 3.5rem;
+    align-self: center;
+}
+
+.header_nav {
+    padding-bottom: 1.7rem;
+}
+
+.header_nav a {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: white;
+}

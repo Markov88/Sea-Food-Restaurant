@@ -1,0 +1,11 @@
+{
+    "items": [
+        {
+            "fields": {
+                "title": "Charbroiled Cheeseburger",
+                "price": "$$14.95",
+                "discription": "lettuce, tomato, onions, pickles, American cheese, bacon mayo"
+            }
+        },
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "items": [
+        {
+            "fields": {
+                "title": "Charbroiled Cheeseburger",
+                "price": "$14.95",
+                "discription": "lettuce, tomato, onions, pickles, American cheese, bacon mayo"
+            }
+        },
+        {
+            "fields": {
+                "title": "Hot Chicken",
+                "price": "$14.95",
+                "discription": "fried chicken basted in hot sauce, lettuce, tomato, pickles, mayo"
+            }
+        },
+        {
+            "fields": {
+                "title": "The Whaler",
+                "price": "$18.95",
+                "discription": "our charbroiled cheeseburger with smoked bacon, avocado, and fried onions"
+            }
+        },
+        {
+            "fields": {
+                "title": "Blackened Fish",
+                "price": "$15.95",
+                "discription": "blackened rockfish, lettuce, tomato, tartar sauce"
+            }
+        },
+        {
+            "fields": {
+                "title": "Calamari",
+                "price": "$14.95",
+                "discription": "flash-fried calamari filets, lettuce, tomato, tartar sauce"
+            }
+        } ,
+        {
+            "fields": {
+                "title": "Shrimp Salad",
+                "price": "$16.95",
+                "discription": "tender bay shrimp, dill mayonnaise, lettuce, tomato"
+            }
+        } ,
+        {
+            "fields": {
+                "title": "Crab Melt",
+                "price": "$17.95",
+                "discription": "open-faced on sourdough"
+            }
+        } 
+    ]
+}

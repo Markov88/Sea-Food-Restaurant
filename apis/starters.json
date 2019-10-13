@@ -1,0 +1,81 @@
+{
+    "items": [
+        {
+            "fields": {
+                "title": "Creamy Clam Chowder",
+                "price": "$13.95",
+                "discription": "Garlic-Buttered and Toasted Sourdough Bread Bowl"
+            }
+        },
+        {
+            "fields": {
+                "title": "Roasted Pacific Oysters",
+                "price": "$12.95",
+                "discription": "topped with crab and artichoke gratin"
+            }
+        },
+        {
+            "fields": {
+                "title": "Garlic Cheese Bread",
+                "price": "$8.95",
+                "discription": "with hearty marinara dipping sauce"
+            }
+        },
+        {
+            "fields": {
+                "title": "Crab Cakes",
+                "price": "$14.95",
+                "discription": "roasted red pepper aioli"
+            }
+        },
+        {
+            "fields": {
+                "title": "Bruschetta",
+                "price": "$9.95",
+                "discription": "chopped tomatoes, fresh basil, extra virgin olive oil, goat cheese spread on toast"
+            }
+        },
+        {
+            "fields": {
+                "title": "Fried Calamari",
+                "price": "$14.95",
+                "discription": "wild caught. Monterey’s most famous appetizer!"
+            }
+        },
+        {
+            "fields": {
+                "title": "Steamed Castroville Artichoke",
+                "price": "$11.95",
+                "discription": "anchovy dressing, garlic mayo"
+            }
+        },
+        {
+            "fields": {
+                "title": "Bang-Bang Shrimp",
+                "price": "$13.95",
+                "discription": "crispy shrimp tossed in a creamy, spicy sauce"
+            }
+        },
+        {
+            "fields": {
+                "title": "Garlic Steamers",
+                "price": "$14.95",
+                "discription": "clams and mussels in a white wine-garlic-tomato broth"
+            }
+        },
+        {
+            "fields": {
+                "title": "Crab and Artichoke Dip",
+                "price": "$12.95",
+                "discription": "served hot with garlic toast"
+            }
+        },
+        {
+            "fields": {
+                "title": "Fresh Pacific Oysters",
+                "price": "$13.95",
+                "discription": "shucked to order, half dozen"
+            }
+        }
+    ]
+}

@@ -1,0 +1,60 @@
+.nav_menu {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
+
+.nav_menu a {
+    text-decoration: none;
+    color: rgb(14, 13, 13);
+    margin: 0 1rem;
+}
+
+.conteiner_menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.conteiner_box {
+    flex: 0 0 45%;
+}
+
+.conteiner_box:first-of-type {
+    margin-right: 2rem;
+}
+
+.menu_heading {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding-bottom: .3rem;
+}
+
+.menu_price {
+    margin: auto 0 auto 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.menu_desc {
+    padding: .3rem 0 1.5rem 0;
+}
+
+.anim{
+    animation: boxesAnim .5s ;
+   
+    
+    
+}
+@keyframes boxesAnim {
+    from {
+        transform: translateY( 11rem);
+        opacity: 0;
+        
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

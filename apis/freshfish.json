@@ -1,0 +1,86 @@
+{
+    "items": [
+        {
+            "fields": {
+                "title": "West Coast Cioppino",
+                "price": "$29.95",
+                "discription": "fresh fish, prawns, scallops, clams, mussels and calamari simmered in a seafood-tomato broth with garlic cheese bread"
+            }
+        },  {
+            "fields": {
+                "title": "Mahi-Mahi",
+                "price": "$23.95",
+                "discription": "grilled - garlic mashed potatoes, vegetables, lemon caper butter sauce"
+            }
+        },  {
+            "fields": {
+                "title": "Fish and Chips",
+                "price": "$16.95",
+                "discription": "lightly breaded and fried pacific rock fish with tartar sauce and french fries"
+            }
+        },  {
+            "fields": {
+                "title": "Prawns Scampi",
+                "price": "$24.95",
+                "discription": "white wine, lemon, butter, garlic, mushrooms, tomatoes, splash cream, rice"
+            }
+        },  {
+            "fields": {
+                "title": "Calamari & Fries",
+                "price": "$18.95",
+                "discription": "flash-fried with tartar sauce and french fries"
+            }
+        },  {
+            "fields": {
+                "title": "Pacific Rockfish",
+                "price": "$23.95",
+                "discription": "grilled with garlic mashed potatoes, vegetables, lemon-caper butter sauce"
+            }
+        },  {
+            "fields": {
+                "title": "Prawns & Fries",
+                "price": "$26.95",
+                "discription": "flash-fried large shrimp with tartar sauce and french fries"
+            }
+        },  {
+            "fields": {
+                "title": "Salmon Filet",
+                "price": "$24.95",
+                "discription": "grilled or blackened with garlic mashed potatoes, vegetables, lemon cilantro cream"
+            }
+        },  {
+            "fields": {
+                "title": "Fisherman’s Platter",
+                "price": "$22.95",
+                "discription": "flash-fried large shrimp, calamari and rockfish with french fries"
+            }
+        }
+        ,  {
+            "fields": {
+                "title": "Lobster Tail",
+                "price": "$21.95",
+                "discription": "broiled - served with rice, vegetables and melted butter"
+            }
+        
+        },  {
+            "fields": {
+                "title": "Calamari Steak",
+                "price": "$17.95",
+                "discription": "grilled with seasoned breadcrumbs, garlic mashed potatoes and vegetables"
+            }
+        }
+        ,  {
+            "fields": {
+                "title": "Sand Dabs",
+                "price": "$23.95",
+                "discription": "garlic mashed potatoes, caper-butter sauce, rice and vegetables"
+            }
+        }
+        ,  {
+            "fields": {
+                "title": "Fresh Abalone",
+                "price": "$25.95",
+                "discription": "farm-raised in Monterey – lightly breaded and grilled, lemon-caper butter sauce"
+            }
+        }
+    ]}
