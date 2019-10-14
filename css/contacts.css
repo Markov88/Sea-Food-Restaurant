@@ -1,26 +1,115 @@
-.displayy_contacts {
-     
+.display_contacts {
     width: 100%;
     height: 100%;
     position: fixed;
     background: black;
-    opacity: .93;
-    z-index: 999999;
-    top:0;
-    left:0;
-    transition: .3s;
+    opacity: 0;
+    z-index: -99999;
+    top: 0rem;
+    left: 0rem;
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:3rem;
 }
 
-.display_heading{
+.display_heading {
     position: absolute;
-    top:10%;
-    left:90%;
+    top: 10%;
+    left: 90%;
     cursor: pointer;
-    color:white;
-    visibility: hidden;
+    color: white;
     transition: .3s;
 }
 
-.contacts_form{
-    display:none;
+.heading_footer {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.contacts_form {
+    width: 45rem;
+    padding: 3rem;
+    display: flex;
+    background: rgb(107, 107, 107);
+    border-radius: 1rem;
+}
+
+.content_form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-right: 2rem;
+}
+
+.form_text_heading {
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+.form_text_p {
+    padding-bottom: 2rem;
+}
+
+.form_anchor {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color:black;
+}
+
+.form {
+    width: 50%;
+}
+
+.form_group {
+    padding: 0.5rem 0;
+}
+
+input.form_input {
+    width: 100%;
+    border-radius: 0.5rem;
+    outline: none;
+    padding: 0.6rem 1rem;
+    border: none;
+    font-size: 1rem;
+    background: #F6F6FD;
+    transition: .4s;
+}
+
+textarea.form_input {
+    width: 100%;
+    border-radius: 0.5rem;
+    outline: none;
+    padding: 0.6rem 0.6rem 0.6rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: #F6F6FD;
+    transition: .4s;
+}
+
+input.form_input:focus, textarea.form_input:focus {
+    background: rgb(219, 218, 223);
+}
+
+#submit {
+    width: 100%;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: rgb(80, 80, 80);
+    color: #C9C4D5;
+    transition: .4s;
+}
+
+#submit:hover {
+    transition: .4s;
+    color: rgb(34, 34, 34);
+    background: rgb(202, 202, 202)
 }

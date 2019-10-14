@@ -46,16 +46,16 @@ body {
 
 #contacts {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 2rem 6rem;
+    padding: 2rem 4rem;
     color: white;
     background: rgb(41, 41, 41);
     ;
 }
 
 .footer_boxes {
-    flex: 0 0 33%;
+    flex: 0 0 33.3%;
     text-align: center;
 }
 
@@ -89,3 +89,4 @@ body {
     height: 50vh;
     border: 2px solid #333;
 } */
+ 

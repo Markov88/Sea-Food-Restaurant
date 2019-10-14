@@ -4,11 +4,10 @@ const displayOut = document.querySelector('.display_heading');
 const formDisplay = document.querySelector('.contacts_form');
 
 contacts.addEventListener('click', () => {
-    display.classList.add('displayy_contacts');
-    displayOut.style.visibility = 'visible';
-    formDisplay.style.display = 'block';
+    display.style.zIndex = '99999';
+    display.style.opacity = '.97'
 })
 displayOut.addEventListener('click', () => {
-    display.classList.remove('displayy_contacts');
-    formDisplay.style.display = 'none';
+    display.style.zIndex = '-99999';
+    display.style.opacity = '0'
 })
