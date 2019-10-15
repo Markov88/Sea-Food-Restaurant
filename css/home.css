@@ -48,26 +48,32 @@
 }
 
 .conteiner_home {
-    width: 100%;
+     width: 100%;
     display: flex;
-    justify-content: space-between;
+ 
+  
 }
 
 .discripion_home {
-    flex: 0 0 50%;
+    flex: 0 0 60%;
     font-size: 1.2rem;
     padding-right: 3rem;
-    text-align: justify;
+    text-align: justify; display: flex;
+     
 }
 
-.discription_img {
-    width: auto;
-    height: auto;
+.discripiton_img {
+    display: flex;
+     flex:1 0 30%;
+   border: 2px solid red;
+    
+    
 }
 
-.discription_img img {
-    max-width: 100%;
-    max-height: 100%;
+#img3 {
+   object-fit: cover;
+   width: 100%;
+   
 }
 
 .conteiner_header {
