@@ -14,4 +14,5 @@
         }
         previousScroll = currentScroll;
     });
+    
 }()); 

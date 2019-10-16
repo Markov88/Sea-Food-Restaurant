@@ -1,7 +1,7 @@
 const menuTags = document.querySelectorAll('.menu_a');
 const box1 = document.getElementById('box1');
 const box2 = document.getElementById('box2');
-const boxes = document.querySelector('.conteiner_menu');
+const menuTitle = document.querySelector('.menuTitle');
 
 
 class Menu {
@@ -46,12 +46,21 @@ class UI {
     }
 }
 
+let products = new Menu();
+let ui = new UI();
+
+document.addEventListener('DOMContentLoaded', () => {
+    let y = 'starters'
+    menuTitle.innerHTML = y;
+    products.getProducts(y).then(y => ui.displayProducts(y));
+})
+
 menuTags.forEach(el => el.addEventListener('click', function () {
     let x = this.getAttribute('href').split('').slice(1).join('');
-    let products = new Menu();
-    let ui = new UI();
+    menuTitle.innerHTML = x;
     products.getProducts(x).then(x => ui.displayProducts(x));
-    boxes.classList.remove('anim');
-    void boxes.offsetWidth;
-    boxes.classList.add('anim');
+    //   boxes.classList.remove('anim');
+    //   void boxes.offsetWidth;
+    //   boxes.classList.add('anim');
+
 }));

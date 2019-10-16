@@ -40,6 +40,9 @@
 .menu_desc {
     padding: .3rem 0 1.5rem 0;
 }
+.menuTitle{
+    text-align: center;
+}
 
 .anim{
     animation: boxesAnim .5s ;

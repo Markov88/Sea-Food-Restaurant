@@ -16,6 +16,7 @@
     color: rgb(34, 33, 33);
     padding: 4rem;
     z-index: 1;
+    animation: homeAnim 4s infinite ease;
 }
 
 .home_content:after {
@@ -48,32 +49,27 @@
 }
 
 .conteiner_home {
-     width: 100%;
+    width: 100%;
     display: flex;
- 
-  
 }
 
 .discripion_home {
     flex: 0 0 60%;
     font-size: 1.2rem;
     padding-right: 3rem;
-    text-align: justify; display: flex;
-     
+    text-align: justify;
+    display: flex;
 }
 
 .discripiton_img {
     display: flex;
-     flex:1 0 30%;
-   border: 2px solid red;
-    
-    
+    flex: 1 0 30%;
+    border: 2px solid red;
 }
 
 #img3 {
-   object-fit: cover;
-   width: 100%;
-   
+    object-fit: cover;
+    width: 100%;
 }
 
 .conteiner_header {
@@ -89,3 +85,15 @@
     color: wheat;
     font-size: 3rem;
 }
+
+/* @keyframes homeAnim {
+    0% {
+       transition: rotate(180deg);
+        opacity: 1;
+    }
+    50% {}
+    100% {
+        transition: rotate(0);
+        opacity: 0;
+    }
+} */
