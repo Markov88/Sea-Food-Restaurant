@@ -85,17 +85,17 @@
 }
 
 .from-right{
-    /* grid-column: 2 / 3; */
+    
     transform: translateX(-50%);
 }
 
 .from-left {
-    /* grid-column: 3 / 4; */
+    
     transform: translateX(50%);
 }
 
 .from-left, .from-right {
-    transition: opacity .3s ease-in, transform .4s ease-in;
+    transition: opacity .4s ease-in, transform .4s ease-in;
     opacity: 0;
 }
 
