@@ -20,6 +20,7 @@ html {
 body {
     font: 16px/1.3 "Nunito", sans-serif;
     letter-spacing: 1px;
+    overflow-x: hidden;
 }
 
 
