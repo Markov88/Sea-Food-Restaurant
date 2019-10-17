@@ -8,7 +8,8 @@
 
 .tuesday_img img {
     object-fit: cover;
-    width: 100%
+    width: 100%;
+    box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.75);
 }
 
 .tuesday_heading_div {
@@ -16,6 +17,11 @@
     background: ivory;
     padding: 2vw 3vw;
     margin-left: -30%;
+    box-shadow: 0px 0px 3px 2px rgba(0,0,0,0.75);
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    font-style: italic;
+    text-align: center;
 }
 
 .tuesday_heading {
@@ -37,8 +43,13 @@
 }
 
 .heading_offer {
+    font-size:2.3rem;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    font-style: italic;
     text-align: center;
     padding: 3rem 0;
+    color:rgb(41, 41, 41);
 }
 
 .launch_offers {
@@ -51,27 +62,25 @@
     object-fit: cover;
     width: 100%;
     height: 22rem;
+    box-shadow: 1px 1px 10px 3px rgba(0,0,0,0.75);
 }
 
 .offer_boxes {
     display: flex;
-    flex: 0 1 47%;
+    flex: 0 0 47%;
     flex-direction: column;
     text-align: center;
     padding: 1rem 0;
     height: 33rem;
+    
 }
-
-/* .offer_boxes:first-of-type {
-    padding-right: 1rem;
-}
-
-.offer_boxes:nth-of-type(2) {
-    padding-left: 1rem;
-} */
+ 
 
 .heading_offer_menu {
-    padding-top: 1rem;
+    padding: 1rem 0 .5rem 0;
+    font-size:1.5rem;
+    text-transform: uppercase;
+    color:rgb(31, 31, 31);
 }
 
 .p_offer_menu {
@@ -84,23 +93,20 @@
     flex-wrap: wrap;
 }
 
-.from-right{
-    
+.from-right {
     transform: translateX(-50%);
 }
 
 .from-left {
-    
     transform: translateX(50%);
 }
 
 .from-left, .from-right {
-    transition: opacity .4s ease-in, transform .4s ease-in;
+    transition: opacity .3s ease-in, transform .5s ease-in;
     opacity: 0;
 }
 
 .from-left.appear, .from-right.appear {
-    -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1;
 }

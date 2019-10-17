@@ -42,6 +42,12 @@
 }
 .menuTitle{
     text-align: center;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    font-style: italic;
+    font-size:2.5rem;
+    font-weight: 400;
+      padding-bottom:2rem ;
 }
 
 .anim{

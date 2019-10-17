@@ -7,7 +7,7 @@ const menuTitle = document.querySelector('.menuTitle');
 class Menu {
     async getProducts (x) {
         try {
-            let result = await fetch(`./apis/${ x }.json`);
+            let result = await fetch(`/apis/${ x }.json`);
             let data = await result.json();
             let products = data.items;
             products = products.map(item => {
@@ -51,13 +51,13 @@ let ui = new UI();
 
 document.addEventListener('DOMContentLoaded', () => {
     let y = 'starters'
-    menuTitle.innerHTML = y;
+    menuTitle.innerHTML = y.toUpperCase();
     products.getProducts(y).then(y => ui.displayProducts(y));
 })
 
 menuTags.forEach(el => el.addEventListener('click', function () {
     let x = this.getAttribute('href').split('').slice(1).join('');
-    menuTitle.innerHTML = x;
+    menuTitle.innerHTML = x.toUpperCase();
     products.getProducts(x).then(x => ui.displayProducts(x));
     //   boxes.classList.remove('anim');
     //   void boxes.offsetWidth;

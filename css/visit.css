@@ -1,0 +1,45 @@
+.visit_conteiner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reservetion {
+    display: flex;
+    text-align: center;
+    padding-top: 7rem;
+    flex-direction: column;
+}
+
+.p_reservation {
+    padding: .5rem 0 1rem 0;
+}
+
+.heading_reservation {
+    color: rgb(41, 41, 41);
+}
+
+.open_table {
+    display: flex;
+    flex-direction: column;
+    background: rgb(41, 41, 41);
+    box-shadow: 0px 1px 9px 2px rgba(0, 0, 0, 0.75);
+    color:rgb(226, 226, 226);
+    font-weight: 600;
+    position: relative;
+    width: 50%;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.p_table {
+    padding-bottom: 1rem;
+    font-size: 10px;
+}
+
+#table {
+    margin: 0 auto;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    background: honeydew;
+    color: black;
+}
