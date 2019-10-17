@@ -1,13 +1,15 @@
 const anchorTags = document.querySelectorAll('a')
 
-anchorTags.forEach((e) => e.addEventListener('click', scroll))
+anchorTags.forEach((e) => { e.addEventListener('click', scroll) })
 
 function scroll (event) {
   event.preventDefault()
-  document.querySelector(this.getAttribute('href')).scrollIntoView({
-    block: 'start',
-    behavior: 'smooth'
-  })
+  if (this.classList !== 'menu_a') {
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      block: 'start',
+      behavior: 'smooth'
+    })
+  }
 };
 
 const makeReservation = document.querySelector('#makeReservetion');
@@ -23,8 +25,8 @@ makeReservation.addEventListener('click', () => {
 const sliders = document.querySelectorAll(".offer_boxes");
 const homeDiscription = document.querySelector('.discripion_home');
 const homeImg = document.querySelector('.discripiton_img');
- const tuesdayImg=document.querySelector('.tuesday_img');
- const tuesdayContent=document.querySelector('.tuesday_content');
+const tuesdayImg = document.querySelector('.tuesday_img');
+const tuesdayContent = document.querySelector('.tuesday_content');
 
 const appearOptions = {
   threshold: 0,
@@ -55,4 +57,29 @@ appearOnScroll.observe(homeImg);
 appearOnScroll.observe(tuesdayImg);
 appearOnScroll.observe(tuesdayContent);
 
+const makeReservationTable = document.querySelector('.open_table');
+const menuBoxes = document.querySelectorAll('.conteiner_box')
+const appearHorisontalOptions = {
+  threshold: 0,
+  rootMargin: "0px 0px -100px 0px"
+};
 
+const appearHorisontal = new IntersectionObserver(function (
+  entries,
+  appearHorisontal
+) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.add("appearY");
+      appearHorisontal.unobserve(entry.target);
+    }
+  });
+},
+  appearHorisontalOptions);
+
+appearHorisontal.observe(makeReservationTable);
+menuBoxes.forEach(boxes => {
+  appearHorisontal.observe(boxes)
+})

@@ -93,20 +93,3 @@
     flex-wrap: wrap;
 }
 
-.from-right {
-    transform: translateX(-50%);
-}
-
-.from-left {
-    transform: translateX(50%);
-}
-
-.from-left, .from-right {
-    transition: opacity .3s ease-in, transform .5s ease-in;
-    opacity: 0;
-}
-
-.from-left.appear, .from-right.appear {
-    transform: translateX(0);
-    opacity: 1;
-}
