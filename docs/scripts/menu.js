@@ -7,7 +7,7 @@ const menuTitle = document.querySelector('.menuTitle');
 class Menu {
     async getProducts (x) {
         try {
-            let result = await fetch(`/apis/${ x }.json`);
+            let result = await fetch(`../apis/${ x }.json`);
             let data = await result.json();
             let products = data.items;
             products = products.map(item => {
