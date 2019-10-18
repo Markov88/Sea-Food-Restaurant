@@ -1,5 +1,6 @@
 .tuesday_conteiner {
     display: flex;
+    
 }
 
 .tuesday_img {
@@ -55,7 +56,7 @@
 .launch_offers {
     display: flex;
     justify-content: space-between;
-    height: 34rem;
+    
 }
 
 .offer_boxes img {
@@ -71,7 +72,7 @@
     flex-direction: column;
     text-align: center;
     padding: 1rem 0;
-    height: 33rem;
+     
     
 }
  
@@ -88,7 +89,7 @@
 }
 
 .weekly_offers {
-    display: flex;
+    display: flex; 
     justify-content: space-between;
     flex-wrap: wrap;
 }

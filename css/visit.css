@@ -1,13 +1,13 @@
 .visit_conteiner {
     display: flex;
     justify-content: space-between;
-    overflow-y: hidden;
+ overflow-y: hidden;
 }
 
 .reservetion {
     display: flex;
     text-align: center;
-    padding-top: 7rem;
+    padding-top: 3rem;
     flex-direction: column;
 }
 
