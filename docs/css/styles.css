@@ -104,8 +104,8 @@ body {
     .header_logo:first-of-type {
         padding: 1.5rem 0 1rem 0;
     }
-    #logo2{
-        padding:0;
+    #logo2 {
+        padding: 0;
     }
     .tuesday_heading {
         font-size: 3.5vw;
@@ -126,7 +126,6 @@ body {
     }
     #contacts {
         padding: 3rem 2rem;
-       
     }
 }
 
@@ -157,28 +156,34 @@ body {
     }
     #contacts {
         flex-direction: column;
-         
-        
     }
     .footer_boxes {
         padding-bottom: 2rem;
     }
-    #heading_footer_contacts{
+    #heading_footer_contacts {
         padding-top: 2rem;
     }
-    
     #logo2 {
         padding: .5rem 0;
     }
-    .contacts_form{
+    .contacts_form {
         flex-direction: column;
-        padding:2rem;
+        padding: 2rem;
     }
-    .content_form,.form{
+    .content_form, .form {
         width: 100%;
     }
-    .content_form{
+    .content_form {
         text-align: center;
+    }
+    #order1 {
+        order: 1;
+    }
+    #order2 {
+        order: 3;
+    }
+    #order3 {
+        order: 2;
     }
 }
 
@@ -192,8 +197,8 @@ body {
     .tuesday_conteiner {
         flex-direction: column;
     }
-    #box1{
-        margin:0;
+    #box1 {
+        margin: 0;
     }
     .tuesday_heading_div {
         margin-left: 5%;
@@ -211,22 +216,21 @@ body {
     .open_table {
         width: 70%;
     }
-    .section_conteiner{
-        padding:2rem 1.5rem;
+    .section_conteiner {
+        padding: 2rem 1.5rem;
     }
     .home {
         height: 60vh;
     }
-    .home_content{
-        top:4rem;
-         
+    .home_content {
+        top: 4rem;
     }
-    .header_heading{
+    .header_heading {
         letter-spacing: 1px;
-        font-weight:600;
-        font-size:2rem;
+        font-weight: 600;
+        font-size: 2rem;
     }
-    .header_p{
-        font-size:1.2rem;
+    .header_p {
+        font-size: 1.2rem;
     }
 }
