@@ -26,10 +26,6 @@ body {
     overflow-x: hidden;
 }
 
-.home {
-    background: url('/background2.jpg') no-repeat top fixed;
-}
-
 .from-right {
     transform: translateX(-50%);
 }
