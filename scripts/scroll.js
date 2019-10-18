@@ -4,7 +4,7 @@ anchorTags.forEach((e) => { e.addEventListener('click', scroll) })
 
 function scroll (event) {
   event.preventDefault()
-  if (this.classList !== 'menu_a') {
+  if (this.className !== 'menu_a') {
     document.querySelector(this.getAttribute('href')).scrollIntoView({
       block: 'start',
       behavior: 'smooth'
@@ -19,7 +19,7 @@ makeReservation.addEventListener('click', () => {
   reservationHref.scrollIntoView({
     block: 'end',
     behavior: 'smooth',
-  })
+  });
 });
 
 const sliders = document.querySelectorAll(".offer_boxes");
@@ -59,27 +59,30 @@ appearOnScroll.observe(tuesdayContent);
 
 const makeReservationTable = document.querySelector('.open_table');
 const menuBoxes = document.querySelectorAll('.conteiner_box')
-const appearHorisontalOptions = {
+
+const appearVerticalOptions = {
   threshold: 0,
   rootMargin: "0px 0px -100px 0px"
 };
 
-const appearHorisontal = new IntersectionObserver(function (
+const appearVertical = new IntersectionObserver(function (
   entries,
-  appearHorisontal
+  appearVertical
 ) {
   entries.forEach(entry => {
     if (!entry.isIntersecting) {
       return;
     } else {
       entry.target.classList.add("appearY");
-      appearHorisontal.unobserve(entry.target);
+      appearVertical.unobserve(entry.target);
     }
   });
 },
-  appearHorisontalOptions);
+  appearVerticalOptions);
 
-appearHorisontal.observe(makeReservationTable);
+appearVertical.observe(makeReservationTable);
 menuBoxes.forEach(boxes => {
-  appearHorisontal.observe(boxes)
-})
+  appearVertical.observe(boxes);
+});
+
+

@@ -49,19 +49,23 @@ class UI {
 let products = new Menu();
 let ui = new UI();
 
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     let y = 'starters'
     menuTitle.innerHTML = y.toUpperCase();
     products.getProducts(y).then(y => ui.displayProducts(y));
 })
 
-menuTags.forEach(el => el.addEventListener('click', function () {
-    let x = this.getAttribute('href').split('').slice(1).join('');
-    menuTitle.innerHTML = x.toUpperCase();
-    products.getProducts(x).then(x => ui.displayProducts(x));
    
-    //   boxes.classList.remove('anim');
-    //   void boxes.offsetWidth;
-    //   boxes.classList.add('anim');
+        menuTags.forEach(el => el.addEventListener('click', function () {
+            let x = this.getAttribute('href').split('').slice(1).join('');
+            menuTitle.innerHTML = x.toUpperCase();
+            products.getProducts(x).then(x => ui.displayProducts(x));
+        }));
 
-}));
+
+
+
+
