@@ -32,6 +32,7 @@
 
 .paragraph_footer {
     padding: 0.1rem 0;
+    font-size:1.1rem;
 }
 
 .icon {
@@ -94,12 +95,14 @@
 
 .form_text_p {
     padding-bottom: 2rem;
+    font-size: 1.1rem;
 }
 
 .form_anchor {
     text-decoration: none;
     font-size: 1.1rem;
     color: black;
+    font-weight: bold;
 }
 
 .form {
@@ -147,7 +150,7 @@ input.form_input:focus, textarea.form_input:focus {
     border: none;
     outline: none;
     cursor: pointer;
-    background: rgb(80, 80, 80);
+    background: rgb(49, 49, 49);
     color: #C9C4D5;
     transition: .4s;
 }

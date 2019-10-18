@@ -1,7 +1,7 @@
 .visit_conteiner {
     display: flex;
     justify-content: space-between;
- overflow-y: hidden;
+    overflow-y: hidden;
 }
 
 .reservetion {
@@ -13,10 +13,12 @@
 
 .p_reservation {
     padding: .5rem 0 1rem 0;
+    font-size:1.3rem;
 }
 
 .heading_reservation {
     color: rgb(41, 41, 41);
+    font-size:1.8rem;
 }
 
 .open_table {
@@ -43,11 +45,12 @@
     text-decoration: none;
     background: rgb(255, 255, 255);
     color: black;
-    transition:.4s;
+    transition: .4s;
     cursor: pointer;
+    font-size:1.2rem;
 }
 
 #table:hover {
     background: rgb(189, 189, 189);
-    transition:.4s;
+    transition: .4s;
 }
