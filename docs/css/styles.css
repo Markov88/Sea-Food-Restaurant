@@ -87,7 +87,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 51em) {
+@media only screen and (max-width: 55em) {
     .discripiton_img {
         display: none;
     }
