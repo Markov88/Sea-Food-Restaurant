@@ -69,20 +69,27 @@ function slidersss () {
 
         let setSlidePosition = (slide, index) => {
             slide.style.left = slideWidth * index + 'px'
+        };
+        slides.forEach(setSlidePosition);
 
-        }
-        slides.forEach(setSlidePosition)
-
+        const moveToSlide = (track, currentSlide, targetSlide) => {
+            track.style.transform = 'translateX(-' + targetSlide.style.left
+            currentSlide.classLis.remove('currentSlide');
+            targetSlide.classLis.add('currentSlide');
+        };
 
         nextBtn.addEventListener('click', e => {
             const currentSlide = track.querySelector('.currentSlide')
             const nextSlide = currentSlide.nextElementSibling
-            const amountToMove = nextSlide.style.left
-            track.style.transform = 'translateX(-' + amountToMove + ')'
-            currentSlide.classList.remove('currentSlide')
-            nextSlide.classList.add('currentSlide')
+            moveToSlide(track, current, nextSlide)
+        };
 
-            console.log(currentSlide)
-        })
+        prevBtn.addEventListener('click', e => {
+            const currentSlide = track.querySelector('.currentSlide')
+            const prevSlide = currentSlide.previousElementSibling
+            moveToSlide(track, current, prevSlide)
+        });
     }
 }
+
+ 
