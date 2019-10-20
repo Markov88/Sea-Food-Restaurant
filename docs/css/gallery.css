@@ -2,24 +2,21 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
 }
 
 .slide {
     display: flex;
-    
     flex: 0 0 auto;
     border: 1px solid black;
     margin: .5rem;
-    overflow: hidden;
-   
+    position: relative;
+    text-align: center;
 }
 
 .slide img {
     object-fit: cover;
     width: 11rem;
     height: 11rem;
-     
 }
 
 #gallery {

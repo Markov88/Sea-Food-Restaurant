@@ -1,0 +1,90 @@
+.imgButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: coral;
+    overflow: hidden;
+    text-align: center;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    transition: .4s;
+    cursor: pointer;
+    opacity: 0;
+}
+
+img {
+    transition: .4s;
+}
+
+.viewGallery {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: black;
+    opacity: 0;
+    z-index: -99999;
+    top: 0rem;
+    left: 0rem;
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+
+.carousel {
+    position: relative;
+    margin: 0 auto;
+    width: 60%;
+    height: 35rem;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.track_conteiner {
+    position: relative;
+    height: 100%;
+}
+
+.track_carousel {
+    list-style: none;
+    position: relative;
+    height: 100%;
+transition: .3s ease-in;
+}
+
+.carousel_slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4rem;
+    background: transparent;
+    border: none;
+    color: rgb(168, 168, 168);
+    cursor: pointer;
+    outline: none;
+}
+
+.carousel_btn.btn_left {
+    left: -6rem;
+}
+
+.carousel_btn.btn_right {
+    right: -6rem;
+}
+
+.currentSlide{
+    background: rgba(170, 169, 167, 0.233);
+}
