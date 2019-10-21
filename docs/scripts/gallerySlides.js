@@ -1,27 +1,14 @@
 
 const divSlides = document.querySelectorAll('.slide')
 const viewGallery = document.querySelector('.viewGallery')
+const track = document.querySelector('.track_carousel');
 
-const addBtns = function (img, btns) {
-    btns = document.createElement('p')
-    btns.textContent = 'View'
-    img.appendChild(btns).classList.add('imgButton')
-    btns.addEventListener('click', onViewClick)
+function x (func) {
+    Array.from(divSlides).forEach(func)
 }
 
-function onViewClick (e) {
-    viewGallery.style.zIndex = '99999'
-    viewGallery.style.opacity = '.97'
-
-    e.target.parentElement.children[0].classList.add('currentSlide')
-    if (e.target.parentElement.children[0].classList.contains('currentSlide')) {
-        console.log('xx')
-    }
-    // 
-
-    x(cloneImages)
-    slidersss()
-};
+// Array.from(divSlides).forEach(addBtns);
+// Array.from(divSlides).forEach(imagesHover);
 
 const imagesHover = function (imgs) {
     imgs.addEventListener('mouseenter', function () {
@@ -33,15 +20,43 @@ const imagesHover = function (imgs) {
         this.children[0].style.opacity = '1'
     });
 };
+x(imagesHover)
 
-// Array.from(divSlides).forEach(addBtns);
-// Array.from(divSlides).forEach(imagesHover);
-// Array.from(divSlides).forEach(imagesHover);
-function x (func) {
-    Array.from(divSlides).forEach(func)
+function addBtns (img, btns) {
+    btns = document.createElement('p')
+    btns.textContent = 'View'
+    img.appendChild(btns).classList.add('imgButton')
+    btns.addEventListener('click', (e) => {
+
+        viewGallery.style.zIndex = '99999'
+        viewGallery.style.opacity = '1'
+        e.target.parentElement.children[0].classList.add('currentSlide');
+        x(cloneImages)
+        e.target.parentElement.children[0].classList.remove('currentSlide');
+        slidersss()
+
+    });
 }
 x(addBtns)
-x(imagesHover)
+
+
+viewGallery.addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) {
+        viewGallery.style.zIndex = '-99999';
+        viewGallery.style.opacity = '0';
+        deleteChild()
+       
+    }
+})
+
+function deleteChild () {
+
+    let first = track.firstChild;
+    while (first) {
+        first.remove();
+        first = track.firstChild;
+    };
+};
 
 function cloneImages (img, createLi) {
     createLi = document.createElement('li')
@@ -49,43 +64,48 @@ function cloneImages (img, createLi) {
         createLi.classList.add('currentSlide')
         img.children[0].classList.remove('currentSlide')
     }
-    document.querySelector('.track_carousel').appendChild(createLi).classList.add('carousel_slide')
     let cloneImg = img.children[0].cloneNode(true)
     createLi.appendChild(cloneImg)
-    console.log(createLi)
+    track.appendChild(createLi).classList.add('carousel_slide')
 }
 
 // ----SLIDERS---
 function slidersss () {
-    if (Array.from(document.querySelector('.track_carousel').children).length > 0) {
-        const track = document.querySelector('.track_carousel')
-        const slides = Array.from(track.children)
-        const nextBtn = document.querySelector('.carousel_btn.btn_right')
-        const prevBtn = document.querySelector('.carousel_btn.btn_left')
-        let slideWidth = slides[0].getBoundingClientRect().width
 
+    if (Array.from(track.children).length === 15) {
+
+        const slides = Array.from(track.children);
+        const nextBtn = document.querySelector('.right');
+        const prevBtn = document.querySelector('.left');
+        const slideWidth = slides[0].getBoundingClientRect().width
+        
         let setSlidePosition = (slide, index) => {
-            slide.style.left = slideWidth * index + 'px'
-        }
-        slides.forEach(setSlidePosition)
-        console.log(slides)
-        const moveToSlide = (track, currentSlide, targetSlide) => {
-            track.style.transform = 'translateX(-' + targetSlide.style.left + ')'
-            currentSlide.classLis.remove('.currentSlide')
-            targetSlide.classLis.add('.currentSlide')
-            console.log(targetSlide)
+            slide.style.left = slideWidth * index + 'px';
         };
+        slides.forEach(setSlidePosition);
 
-        nextBtn.addEventListener('click', e => {
-            const currentSlide = track.querySelector('.currentSlide')
-            const nextSlide = currentSlide.nextElementSibling
-            moveToSlide(track, currentSlide, nextSlide)
-        })
+        let indexCurrent = slides.indexOf(track.querySelector('.currentSlide'));
+        track.style.transform = 'translateX(-' + slideWidth * indexCurrent + 'px' + ')';
+
+        const moveToSlide = (track, currentSlide, targetSlide) => {
+            track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+            currentSlide.classList.remove('currentSlide');
+            targetSlide.classList.add('currentSlide');
+        };
+        // moveToSlide(track, track.querySelector('.currentSlide'), prevSlide)
 
         prevBtn.addEventListener('click', e => {
-            const currentSlide = track.querySelector('.currentSlide')
-            const prevSlide = currentSlide.previousElementSibling
-            moveToSlide(track, currentSlide, prevSlide)
-        })
+            const currentSlide = track.querySelector('.currentSlide');
+            const prevSlide = currentSlide.previousElementSibling;
+            moveToSlide(track, currentSlide, prevSlide);
+
+        });
+
+        nextBtn.addEventListener('click', e => {
+            const currentSlide = track.querySelector('.currentSlide');
+            const nextSlide = currentSlide.nextElementSibling;
+            moveToSlide(track, currentSlide, nextSlide);
+             
+        });
     }
-};
+}
