@@ -33,6 +33,8 @@ function addBtns (img, btns) {
         e.target.parentElement.children[0].classList.add('currentSlide');
         x(cloneImages)
         e.target.parentElement.children[0].classList.remove('currentSlide');
+      
+        
         slidersFunc()
     });
 };
@@ -44,18 +46,18 @@ viewGallery.addEventListener('click', (e) => {
         viewGallery.style.zIndex = '-99999';
         viewGallery.style.opacity = '0';
         deleteChild();
-
+        track.removeAttribute("style")
     }
+     
 })
 
 function deleteChild () {
 
-    let first = track.firstChild;
-    while (first) {
-        first.remove();
-        first = track.firstChild;
-    };
-};
+    while (track.firstChild) {
+        track.removeChild(track.firstChild);
+    }
+}
+
 
 function cloneImages (img, createLi) {
     createLi = document.createElement('li');
@@ -80,6 +82,7 @@ function slidersFunc () {
 
         const setSlidePosition = (slide, index) => {
             slide.style.left = slideWidth * index + 'px';
+
         };
         slides.forEach(setSlidePosition);
 
@@ -96,6 +99,7 @@ function slidersFunc () {
             const currentSlide = track.querySelector('.currentSlide');
             const prevSlide = currentSlide.previousElementSibling;
             moveToSlide(track, currentSlide, prevSlide);
+
         });
 
         nextBtn.addEventListener('click', e => {

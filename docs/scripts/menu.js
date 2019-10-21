@@ -58,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
     products.getProducts(y).then(y => ui.displayProducts(y));
 })
 
-   
         menuTags.forEach(el => el.addEventListener('click', function () {
             let x = this.getAttribute('href').split('').slice(1).join('');
             menuTitle.innerHTML = x.toUpperCase();
