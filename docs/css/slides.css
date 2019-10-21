@@ -3,14 +3,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: coral;
+    background: rgba(46, 46, 46, 0.897);
     overflow: hidden;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding: .5rem 1rem;
     transition: .4s;
     cursor: pointer;
     opacity: 0;
+    color: blanchedalmond;
 }
 
 img {
