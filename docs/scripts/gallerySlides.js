@@ -3,7 +3,7 @@ const divSlides = document.querySelectorAll('.slide');
 const viewGallery = document.querySelector('.viewGallery');
 const track = document.querySelector('.track_carousel');
 
-function x (func) {
+function arrDivSlidesForEach (func) {
     Array.from(divSlides).forEach(func);
 };
 
@@ -20,7 +20,7 @@ const imagesHover = function (imgs) {
         this.children[0].style.opacity = '1';
     });
 };
-x(imagesHover);
+arrDivSlidesForEach(imagesHover);
 
 function addBtns (img, btns) {
     btns = document.createElement('p')
@@ -31,30 +31,31 @@ function addBtns (img, btns) {
         viewGallery.style.zIndex = '99999'
         viewGallery.style.opacity = '1'
         e.target.parentElement.children[0].classList.add('currentSlide');
-        x(cloneImages)
+        arrDivSlidesForEach(cloneImages)
         e.target.parentElement.children[0].classList.remove('currentSlide');
-      
-        
         slidersFunc()
+
     });
 };
-x(addBtns);
+arrDivSlidesForEach(addBtns);
 
 
 viewGallery.addEventListener('click', (e) => {
     if (e.target === e.currentTarget) {
         viewGallery.style.zIndex = '-99999';
         viewGallery.style.opacity = '0';
-        deleteChild();
-        track.removeAttribute("style")
+        deleteChildOfTrack();
+        track.removeAttribute('style')
     }
-     
+
 })
 
-function deleteChild () {
+function deleteChildOfTrack () {
 
     while (track.firstChild) {
         track.removeChild(track.firstChild);
+
+
     }
 }
 
@@ -71,10 +72,10 @@ function cloneImages (img, createLi) {
 };
 
 // ----SLIDERS---
+
 function slidersFunc () {
 
     if (Array.from(track.children).length === 15) {
-
         const slides = Array.from(track.children);
         const nextBtn = document.querySelector('.right');
         const prevBtn = document.querySelector('.left');
@@ -82,7 +83,6 @@ function slidersFunc () {
 
         const setSlidePosition = (slide, index) => {
             slide.style.left = slideWidth * index + 'px';
-
         };
         slides.forEach(setSlidePosition);
 
@@ -95,10 +95,12 @@ function slidersFunc () {
             targetSlide.classList.add('currentSlide');
         };
 
+
         prevBtn.addEventListener('click', e => {
             const currentSlide = track.querySelector('.currentSlide');
             const prevSlide = currentSlide.previousElementSibling;
             moveToSlide(track, currentSlide, prevSlide);
+
 
         });
 
