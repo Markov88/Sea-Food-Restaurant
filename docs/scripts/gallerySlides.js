@@ -32,16 +32,19 @@ function addBtns (img, btns) {
         viewGallery.style.zIndex = '99999'
         viewGallery.style.opacity = '1'
         e.target.parentElement.children[0].classList.add('currentSlide');
+
         arrr.forEach((e) => {
             if (e.classList.contains('currentSlide')) {
                 indexTr = arrr.indexOf(e)
-                
+
             }
         });
-      
-        e.target.parentElement.children[0].classList.remove('currentSlide');
+
         slidersFunc()
+
+        e.target.parentElement.children[0].classList.remove('currentSlide');
     });
+
 }
 arrDivSlidesForEach(addBtns);
 
@@ -54,11 +57,12 @@ viewGallery.addEventListener('click', (e) => {
         const p = Array.from(track.children);
         p.forEach((slide) => {
             if (slide.classList.contains('currentSlide')) {
-                slide.remove('currentSlide')
-                console.log('ssss');
+                slide.classList.remove('currentSlide');
             }
+            slide.removeAttribute('style');
         })
         track.removeAttribute('style');
+       
     }
 })
 
@@ -79,7 +83,6 @@ function cloneImages (img, createLi) {
     if (img.children[0].classList.contains('currentSlide')) {
         createLi.classList.add('currentSlide');
         img.children[0].classList.remove('currentSlide');
-        console.log(arrr.indexOf(img.children[0]))
     }
 
     if (track.childNodes.length < 16) {
@@ -99,17 +102,14 @@ function slidersFunc () {
     const slideWidth = slides[0].getBoundingClientRect().width
 
     const setSlidePosition = (slide, index) => {
-        console.log(indexTr)
         slide.style.left = slideWidth * index + 'px';
         if (index === indexTr) {
-            slide.classList.add('currentSlide')   
+            slide.classList.add('currentSlide')
         }
     };
     slides.forEach(setSlidePosition);
-
-
     track.style.transform = 'translateX(-' + slideWidth * indexTr + 'px' + ')';
-   
+
     const moveToSlide = (track, currentSlide, targetSlide) => {
         track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
         currentSlide.classList.remove('currentSlide');
@@ -119,14 +119,15 @@ function slidersFunc () {
     prevBtn.addEventListener('click', e => {
         const currentSlide = track.querySelector('.currentSlide');
         const prevSlide = currentSlide.previousElementSibling;
-        moveToSlide(track, currentSlide, prevSlide);        
+        moveToSlide(track, currentSlide, prevSlide);
     });
 
     nextBtn.addEventListener('click', e => {
         const currentSlide = track.querySelector('.currentSlide');
         const nextSlide = currentSlide.nextElementSibling;
         moveToSlide(track, currentSlide, nextSlide);
-        console.log(currentSlide);
+        // console.log(currentSlide);
         console.log(nextSlide);
+        console.log(currentSlide);
     });
 }
