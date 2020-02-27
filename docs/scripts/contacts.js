@@ -21,4 +21,5 @@ display.addEventListener('click', (e) => {
 formVisit.addEventListener('click', () => {
     display.style.zIndex = '-99999';
     display.style.opacity = '0';
-})
+});
+ 

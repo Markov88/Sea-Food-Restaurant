@@ -1,6 +1,5 @@
 .tuesday_conteiner {
-    display: flex;
-    
+    display: flex; 
 }
 
 .tuesday_img {
@@ -58,7 +57,6 @@
 .launch_offers {
     display: flex;
     justify-content: space-between;
-    
 }
 
 .offer_boxes img {
@@ -74,8 +72,6 @@
     flex-direction: column;
     text-align: center;
     padding: 1rem 0;
-     
-    
 }
  
 
